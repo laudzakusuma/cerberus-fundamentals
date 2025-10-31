@@ -1,0 +1,45 @@
+// This is your Prisma schema file for cerberus-fundamentals PoC
+// Using SQLite for simplicity - switch to PostgreSQL/MySQL for production
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String?
+  name          String?
+  role          String    @default("user") // user, admin, monitor
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  lastLogin     DateTime?
+  
+  events        Event[]
+  
+  @@map("users")
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  type        String   // security_alert, system_status, user_action, api_call, etc.
+  level       String   // info, warning, error, critical
+  message     String?
+  metadata    String?  // JSON string for additional data
+  source      String?  // origin of the event (ip, service, etc.)
+  userId      String?
+  
+  createdAt   DateTime @default(now())
+  
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  @@index([type])
+  @@index([level])
+  @@index([createdAt])
+  @@map("events")
+}

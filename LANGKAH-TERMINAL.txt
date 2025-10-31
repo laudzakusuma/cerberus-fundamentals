@@ -1,0 +1,147 @@
+═══════════════════════════════════════════════════════════════
+   🛡️  LANGKAH-LANGKAH DI TERMINAL - CERBERUS INSTALLATION
+═══════════════════════════════════════════════════════════════
+
+📋 PERSIAPAN: Install Node.js terlebih dahulu
+   → Download dari: https://nodejs.org/
+   → Pilih versi LTS (Long Term Support)
+   → Install → Restart komputer
+
+✅ CEK NODE.JS SUDAH TERINSTALL:
+   
+   node --version
+   npm --version
+   
+   Output seharusnya: v18.x.x atau v20.x.x
+
+───────────────────────────────────────────────────────────────
+
+🚀 INSTALASI CERBERUS - COPY COMMANDS INI:
+
+1️⃣  MASUK KE FOLDER PROJECT
+   
+   cd cerberus-fundamentals
+   
+   # Windows contoh:
+   cd C:\Projects\cerberus-fundamentals
+   
+   # macOS/Linux contoh:
+   cd ~/Projects/cerberus-fundamentals
+
+───────────────────────────────────────────────────────────────
+
+2️⃣  CEK ISI FOLDER
+   
+   # Windows (PowerShell):
+   dir
+   
+   # macOS/Linux:
+   ls -la
+   
+   ✅ Pastikan ada file: package.json
+
+───────────────────────────────────────────────────────────────
+
+3️⃣  INSTALL DEPENDENCIES (2-3 menit)
+   
+   npm install
+   
+   ⏱️ Tunggu sampai muncul:
+   "added 450 packages, and audited 451 packages in 2m"
+
+───────────────────────────────────────────────────────────────
+
+4️⃣  SETUP DATABASE (10 detik)
+   
+   npm run seed
+   
+   ✅ Tunggu sampai muncul:
+   "🎉 Seeding completed!"
+   "Demo credentials: demo@cerberus.dev / demo123"
+
+───────────────────────────────────────────────────────────────
+
+5️⃣  VERIFIKASI SETUP (Optional)
+   
+   node verify-setup.js
+   
+   ✅ Seharusnya muncul banyak tanda centang ✅
+
+───────────────────────────────────────────────────────────────
+
+6️⃣  START SERVER
+   
+   npm run dev
+   
+   ✅ Tunggu sampai muncul:
+   "✓ Ready in 2.5s"
+   "- Local: http://localhost:3000"
+   
+   ⚠️  JANGAN TUTUP TERMINAL INI!
+
+───────────────────────────────────────────────────────────────
+
+7️⃣  BUKA BROWSER
+   
+   Ketik di address bar:
+   http://localhost:3000
+
+───────────────────────────────────────────────────────────────
+
+8️⃣  LOGIN
+   
+   Email: demo@cerberus.dev
+   Password: demo123
+
+───────────────────────────────────────────────────────────────
+
+🎉 SELESAI! Dashboard seharusnya muncul!
+
+═══════════════════════════════════════════════════════════════
+
+🔧 COMMANDS LAINNYA:
+
+   # Stop server
+   Ctrl + C
+   
+   # Restart server
+   npm run dev
+   
+   # Reset database
+   rm prisma/dev.db        (macOS/Linux)
+   del prisma\dev.db       (Windows)
+   npm run seed
+   
+   # Buka database GUI
+   npx prisma studio
+   
+   # Build production
+   npm run build
+
+═══════════════════════════════════════════════════════════════
+
+🚨 TROUBLESHOOTING:
+
+   ERROR: Port 3000 already in use
+   → PORT=3001 npm run dev
+   
+   ERROR: npm not found
+   → Install Node.js dari nodejs.org
+   
+   ERROR: Module not found
+   → npm install
+   
+   ERROR: Database error
+   → rm prisma/dev.db
+   → npm run seed
+
+═══════════════════════════════════════════════════════════════
+
+📚 DOKUMENTASI LENGKAP:
+
+   INSTALL-DARI-NOL.md  → Panduan lengkap dari install Node.js
+   COMMANDS.md          → Quick reference commands
+   INSTALASI.md         → Troubleshooting detail
+   START.md             → Overview & links
+
+═══════════════════════════════════════════════════════════════

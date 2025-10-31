@@ -1,0 +1,89 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║       🛡️  SELAMAT DATANG DI CERBERUS FUNDAMENTALS  🛡️          ║
+║                                                               ║
+║   Security Monitoring Platform dengan 3D Interactive UI      ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📋 PANDUAN INSTALASI - BACA FILE INI BERURUTAN:
+
+┌─────────────────────────────────────────────────────────────┐
+│  1️⃣  START.md              ← MULAI DI SINI!                 │
+│      → Overview & quick links                               │
+│      → Rekomendasi urutan baca                              │
+│                                                             │
+│  2️⃣  COMMANDS.md           ← COPY-PASTE COMMANDS            │
+│      → Instalasi tercepat                                   │
+│      → Hanya commands penting                               │
+│                                                             │
+│  3️⃣  INSTALASI.md          ← PANDUAN LENGKAP                │
+│      → Step-by-step detail                                  │
+│      → Troubleshooting                                      │
+│      → Screenshots expected output                          │
+│                                                             │
+│  4️⃣  FLOWCHART.md          ← VISUAL GUIDE                   │
+│      → Diagram alur install                                 │
+│      → Timeline estimasi                                    │
+│      → Error recovery                                       │
+└─────────────────────────────────────────────────────────────┘
+
+⚡ INSTALASI SUPER CEPAT (3 Menit):
+
+    1. Buka terminal
+    2. cd cerberus-fundamentals
+    3. npm install
+    4. npm run seed
+    5. npm run dev
+    6. Buka: http://localhost:3000
+    7. Login: demo@cerberus.dev / demo123
+
+✅ SELESAI!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOKUMENTASI TAMBAHAN:
+
+    • README.md          → Full documentation (English)
+    • PROJECT_SUMMARY.md → Overview proyek
+    • QUICKSTART.md      → Quick start guide (English)
+    
+🔧 UTILITIES:
+
+    • verify-setup.js    → Cek status instalasi
+    • package.json       → Dependencies list
+    • .env.example       → Environment template
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 REQUIREMENTS:
+
+    ✓ Node.js 18+  (cek: node --version)
+    ✓ npm 8+       (cek: npm --version)
+    ✓ Browser modern (Chrome/Firefox/Edge)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 FITUR PROYEK:
+
+    ✨ Dark futuristic UI (No Tailwind!)
+    🎭 Interactive 3D hero scene
+    🔐 NextAuth authentication
+    📊 Real-time event monitoring
+    📱 PWA support
+    ♿ Fully accessible
+    📈 Responsive design
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIPS:
+
+    • Baca START.md untuk overview lengkap
+    • Gunakan COMMANDS.md untuk instalasi tercepat
+    • Check INSTALASI.md jika ada error
+    • Run 'node verify-setup.js' untuk verify
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Happy coding! 🛡️✨
+

@@ -1,0 +1,83 @@
+/* Cerberus Global Styles */
+/* Most styling is handled via Stitches - this file is minimal */
+
+/* Inter variable font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Custom Properties for dynamic theming */
+:root {
+  /* Core colors matching Stitches theme */
+  --bg: #0B0F14;
+  --bg-elevated: #131920;
+  --accent: #00D1FF;
+  --accent-2: #9B59FF;
+  --text: #E8EEF2;
+  --muted: #9AA4B2;
+  
+  /* Spacing */
+  --space-unit: 8px;
+  
+  /* Motion */
+  --transition-fast: 180ms cubic-bezier(0.22, 0.9, 0.3, 1);
+  --transition-base: 360ms cubic-bezier(0.22, 0.9, 0.3, 1);
+  
+  /* Glass effect */
+  --glass-bg: rgba(19, 25, 32, 0.7);
+  --glass-blur: blur(6px);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(0, 209, 255, 0.3);
+  color: var(--text);
+}
+
+/* Glass card utility class (minimal usage) */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Loading skeleton utility */
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.skeleton {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
