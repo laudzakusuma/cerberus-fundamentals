@@ -1,0 +1,29 @@
+{
+  "name": "cerberus-websocket-server",
+  "version": "1.0.0",
+  "description": "Mock WebSocket server for Cerberus real-time features",
+  "main": "websocket-server.ts",
+  "scripts": {
+    "start": "tsx server/websocket-server.ts",
+    "dev": "tsx watch server/websocket-server.ts",
+    "build": "tsc -p server/tsconfig.json",
+    "start:built": "node dist/websocket-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "websocket",
+    "mock",
+    "server",
+    "real-time"
+  ],
+  "author": "",
+  "license": "MIT"
+}
